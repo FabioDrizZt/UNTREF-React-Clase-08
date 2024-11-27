@@ -2,9 +2,9 @@ import Dashboard from './components/Dashboard'
 import { ThemeContext } from './context/ThemeContext'
 import { useContext } from 'react'
 
-function App() {
+function App () {
   const { isDarkMode, toggleDarkMode } = useContext(ThemeContext)
-  
+
   return (
     <div
       style={{
@@ -17,13 +17,13 @@ function App() {
         flexDirection: 'column'
       }}
     >
-     <h1> Mi App con {isDarkMode ? 'Modo Oscuro 🌙' : 'Modo Claro ☀'} </h1>
-     <button
-     onClick={toggleDarkMode}
-     > Cambiar Tema 
-     </button>
+      <h1> Mi App con {isDarkMode ? 'Modo Oscuro 🌙' : 'Modo Claro ☀'} </h1>
+      <button
+        onClick={toggleDarkMode}
+      > Cambiar Tema
+      </button>
 
-     <Dashboard />
+      <Dashboard />
     </div>
   )
 }
